@@ -3,6 +3,7 @@ require('@openzeppelin/hardhat-upgrades');
 require("./scripts/tasks/deploy.js");
 
 const rinkeby = require("./.secrets/rinkeby.json");
+const mainnet = require("./.secrets/mainnet.json");
 const { removeConsoleLog } = require("hardhat-preprocessor");
 
 module.exports = {
@@ -48,6 +49,10 @@ module.exports = {
     rinkeby: {
       url: rinkeby.url,
       accounts: rinkeby.accounts
+    },
+    mainnet: {
+      url: mainnet.url,
+      accounts: mainnet.accounts
     }
   }
 };
